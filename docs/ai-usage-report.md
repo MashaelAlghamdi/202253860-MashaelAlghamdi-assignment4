@@ -20,7 +20,7 @@ AI tools were used throughout different stages of development to assist with pro
 
 * **Claude** – Used for deeper problem-solving and code improvement. It helped design the Wikipedia API logic, including handling repeated facts and retry mechanisms. It also assisted in debugging layout issues (such as fixing mobile grid layout) and reviewing form validation logic. Based on its feedback, I improved input validation by handling empty spaces using `.trim()` and optimized DOM usage.
 
-* **ChatGPT** – Used mainly for understanding JavaScript concepts and logic. It helped clarify how features such as search filtering, event handling, and validation work, ensuring that I fully understood the implementation before applying it. It was also used to assist in improving the clarity, structure, and organization of the project documentation.
+* **ChatGPT** – Used mainly for understanding JavaScript concepts and logic. It helped clarify how features such as search filtering, event handling, and validation work, ensuring that I fully understood the implementation before applying it. It also assisted with building the Journey timeline section, including the HTML structure, CSS styling, and scroll-triggered animation using IntersectionObserver. It was also used to improve the clarity, structure, and organization of the project documentation.
 
 * **GitHub Copilot** – Used inside VS Code to assist with real-time code completion and repetitive patterns, especially in CSS (e.g., dark mode styling). Suggestions were always reviewed and adjusted before use.
 
@@ -38,7 +38,7 @@ Key benefits include:
 * **Improved Code Quality** – Suggestions such as avoiding repeated DOM queries helped optimize performance.
 * **Better Accuracy** – Copilot reduced syntax errors and repetitive mistakes.
 * **Stronger Understanding** – ChatGPT explanations helped me understand logic instead of just copying solutions.
-* **UI/UX Improvements** – AI suggested better interaction patterns (e.g., smoother accordion behavior).
+* **UI/UX Improvements** – AI suggested better interaction patterns (e.g., smoother accordion behavior,timeline animations).
 * **Documentation Support** – AI tools were used to improve the clarity, structure, and organization of written documentation. They helped refine explanations, ensure consistency between files (README and technical documentation), and present technical concepts in a clearer and more professional way.
 
 
@@ -91,7 +91,7 @@ AI was used not only for coding assistance but also as a **decision-support tool
 
 * Explored different approaches for API handling and UI behavior before selecting the final implementation.
 * Improved performance by applying AI suggestions such as caching DOM elements.
-* Enhanced user experience by refining interactions like accordion animations and validation feedback.
+* Enhanced user experience by refining interactions like accordion animations, timeline scroll effects, and validation feedback.
 
 This allowed me to focus more on **design quality, performance, and usability**, rather than just basic implementation.
 
