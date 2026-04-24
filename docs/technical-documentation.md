@@ -49,6 +49,7 @@ Implements all interactive features including logic handling, state management, 
 | Hero       | Introduction + greeting + timer |
 | Tech Facts | API integration                 |
 | About      | Personal info                   |
+| Journey    | Timeline of academic milestones |
 | Projects   | Interactive project system      |
 | Contact    | Form validation                 |
 
@@ -71,7 +72,15 @@ Implements all interactive features including logic handling, state management, 
 
 ---
 
-### 3. Projects Section (Main Interaction Area)
+### 3. Journey Section
+
+* Timeline items are hidden by default
+* As the user scrolls, each item animates into view when it reaches 85% of the viewport height
+* Items hide again when scrolling back up
+
+---
+
+### 4. Projects Section (Main Interaction Area)
 
 #### Search (Real-time Filtering)
 
@@ -103,7 +112,7 @@ Implements all interactive features including logic handling, state management, 
 
 ---
 
-### 4. API Feature (Tech Facts)
+### 5. API Feature (Tech Facts)
 
 * User clicks "Generate Fact"
 * Loading spinner appears
@@ -114,7 +123,7 @@ Implements all interactive features including logic handling, state management, 
 
 ---
 
-### 5. Contact Form
+### 6. Contact Form
 
 * User fills form
 
@@ -128,7 +137,7 @@ Validation includes:
 
 ---
 
-### 6. Theme Toggle (State Management)
+### 7. Theme Toggle (State Management)
 
 * User switches between light/dark mode
 * Preference stored in `localStorage`
@@ -136,7 +145,7 @@ Validation includes:
 
 ---
 
-### 7. Additional Dynamic Features
+### 8. Additional Dynamic Features
 
 * **Visit Timer** updates every second
 * **Dynamic Greeting** based on time of day
@@ -164,7 +173,7 @@ document.addEventListener("DOMContentLoaded")
 #### 2. Dynamic Greeting
 
 * Uses `Date().getHours()`
-* Displays morning/afternoon/evening
+* Displays good morning/good afternoon/good evening
 
 #### 3. Visit Timer
 
@@ -173,13 +182,16 @@ document.addEventListener("DOMContentLoaded")
 
 #### 4. Search
 
-* Uses `.includes()`
-* Filters DOM elements
+* Listens to `input` event on the search field
+* Matches the **first word** of each project title using `.startsWith()`
+* Shows or hides cards by setting `display: flex` or `display: none`
+* Displays an empty message if no cards are visible
 
 #### 5. Sorting
 
-* Uses `.localeCompare()`
-* Reorders DOM dynamically
+* Converts `NodeList` to array, sorts using `.localeCompare()`
+* Reorders cards in the DOM using `appendChild`
+* Restores original order using `data-index` attribute set at initialization
 
 #### 6. Accordion
 
@@ -194,7 +206,7 @@ document.addEventListener("DOMContentLoaded")
 
 #### 8. API Integration
 
-* Fetch request to Wikipedia API
+* Fetches from `https://en.wikipedia.org/api/rest_v1/page/summary/{language}`
 * Uses retry logic (max attempts)
 * Prevents duplicates with `Set`
 * Error handling using `.catch()`
@@ -204,6 +216,12 @@ document.addEventListener("DOMContentLoaded")
 * Uses `IntersectionObserver`
 * Adds `.visible` class
 * Stops observing after trigger
+
+#### 10. Timeline Scroll Animation
+
+* Selects all `.timeline-item` elements
+* On `scroll` event, checks if each item's top is within 85% of window height
+* Adds `.show` class when in range, removes it when scrolling back up
 
 ---
 
@@ -227,8 +245,11 @@ body.dark { ... }
 
 ### Animations
 
-* Uses `transform` and `opacity`
-* Avoids heavy JS animations
+* Uses `transform` and `opacity` transitions
+* `max-height` animation for accordion
+* `@keyframes gradientMove` for hero name gradient
+* `@keyframes spin` for fact loader spinner
+* `@keyframes blink` for visit badge dot
 
 ---
 
@@ -259,6 +280,7 @@ Supported in modern browsers:
 * No backend (form is front-end only)
 * API may fail occasionally
 * Some modern CSS features have limited support
+* Timeline uses a scroll event listener instead of IntersectionObserver, which is slightly less efficient
 
 ---
 
