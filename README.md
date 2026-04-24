@@ -89,7 +89,7 @@ Open the `index.html` file in your browser.
 
 4. View the website
 
-Or visit the live deployment here: [https://mashaelalghamdi.github.io/202253860-MashaelAlghamdi-Assignment4](https://mashaelalghamdi.github.io/202253860-MashaelAlghamdi-Assignment4)
+Or visit the live deployment here: [https://mashaelalghamdi.github.io/202253860-MashaelAlghamdi-assignment4/]
 
 ## Short Summary of AI Use
 AI tools including Claude, ChatGPT, and GitHub Copilot were used as development assistants throughout this project for code generation, debugging, and improving code quality.
