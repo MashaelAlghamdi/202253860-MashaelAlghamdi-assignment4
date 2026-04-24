@@ -310,3 +310,28 @@ const observer = new IntersectionObserver(entries => {
 revealEls.forEach(el => observer.observe(el));
 
 });
+
+
+function toggleItem(element) {
+  const text = element.querySelector("p");
+  text.classList.toggle("hidden");
+}
+
+
+const items = document.querySelectorAll(".timeline-item");
+
+function showOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  items.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggerBottom) {
+      item.classList.add("show");
+    } else {
+      item.classList.remove("show"); // hide again when scrolling up
+    }
+  });
+}
+
+window.addEventListener("scroll", showOnScroll);
