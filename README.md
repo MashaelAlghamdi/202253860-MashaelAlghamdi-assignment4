@@ -1,12 +1,12 @@
-# Assignment 3️ – Advanced Functionality
+# Assignment 4 – Personal Web Application
 
 ## Project Description  
 
-This project is a responsive personal portfolio website developed using HTML, CSS, and JavaScript (no frameworks). It extends previous assignments by introducing more advanced functionality, improved interactivity, and better performance practices.
+This project is a responsive personal portfolio website developed using HTML, CSS, and JavaScript (no frameworks). It builds on the previous assignment by polishing all existing features into a production-ready application and adding new sections and improvements.
 
 The website showcases my major projects through an interactive interface where users can search, sort, and explore project details dynamically. It also integrates an external API (Wikipedia REST API) to fetch random programming facts, adding a dynamic and data-driven element to the application.
 
-Several advanced features were implemented, including real-time project filtering, sorting options, expandable project descriptions, and a contact form with validation. The application also demonstrates state management through features like dark/light mode persistence using `localStorage`, a dynamic greeting based on time, and a visit duration timer.
+Several advanced features were implemented, including real-time project filtering, sorting options, expandable project descriptions, a Journey timeline with scroll-triggered animations, and a contact form with validation. The application also demonstrates state management through features like dark/light mode persistence using `localStorage`, a dynamic greeting based on time, and a visit duration timer.
 
 In addition, performance optimization techniques were applied, such as lazy loading images, efficient DOM handling, and using `IntersectionObserver` for animations, ensuring a smooth and responsive user experience.
 
@@ -61,7 +61,7 @@ To run this project locally:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/MashaelAlghamdi/202253860-MashaelAlghamdi-Assignment3.git
+git clone https://github.com/MashaelAlghamdi/202253860-MashaelAlghamdi-Assignment4.git
 ```
 
 2. Navigate to the project folder
@@ -89,13 +89,14 @@ Open the `index.html` file in your browser.
 
 4. View the website
 
+Or visit the live deployment here: [https://mashaelalghamdi.github.io/202253860-MashaelAlghamdi-Assignment4](https://mashaelalghamdi.github.io/202253860-MashaelAlghamdi-Assignment4)
 
 ## Short Summary of AI Use
 AI tools including Claude, ChatGPT, and GitHub Copilot were used as development assistants throughout this project for code generation, debugging, and improving code quality.
 
 Claude was mainly used for generating ideas and solving specific problems, such as designing the Wikipedia API logic and improving the contact form validation. It also helped identify issues like handling inputs with only spaces, which I fixed using .trim(), and suggested improvements for layout and performance.
 
-ChatGPT was used to better understand JavaScript concepts and logic, such as how search filtering and validation work. This helped ensure full understanding of the implementation before finalizing the code. It was also used to assist in improving the clarity, structure, and organization of the project documentation.
+ChatGPT was used to better understand JavaScript concepts and logic, such as how search filtering and validation work. It also assisted with building the Journey timeline section. It was also used to assist in improving the clarity, structure, and organization of the project documentation.
 
 GitHub Copilot was used inside VS Code to assist with code completion and repetitive CSS patterns, especially for dark mode styling. All suggestions were reviewed and adjusted when necessary.
 
